@@ -1,0 +1,45 @@
+---
+manual:
+- id: C1001
+  preconditions: These are the C1001 preconditions
+  steps:
+  - number: 1
+    description: Step 1 description
+    expected_result: Step 1 expected result
+  - number: 2
+    description: Step 2 description
+    expected_result: Step 2 expected result
+  - number: 3
+    description: Step 3 description
+    expected_result: Step 3 expected result
+- id: C1002
+  preconditions: These are the C1002 preconditions
+  steps:
+  - number: 1
+    description: Step 1 description
+    expected_result: Step 1 expected result
+  - number: 2
+    description: Step 2 description
+    expected_result: Step 2 expected result
+  - number: 3
+    description: Step 3 description
+    expected_result: Step 3 expected result
+- id: C1003
+  preconditions: These are the C1003 preconditions
+  steps:
+  - number: 1
+    description: Step 1 description
+    expected_result: Step 1 expected result
+  - number: 2
+    description: Step 2 description
+    expected_result: Step 2 expected result
+  - number: 3
+    description: Step 3 description
+    expected_result: Step 3 expected result
+automated:
+- id: C1004
+  script: tbar_pytest/test_cases/test_suite_1000.py
+- id: C1005
+  script: tbar_pytest/test_cases/test_suite_1000.py
+- id: C1006
+  script: tbar_pytest/test_cases/test_suite_1000.py
