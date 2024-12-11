@@ -534,6 +534,7 @@ CheckButton/styles/hover = SubResource("StyleBoxEmpty_oyn5l")
 CheckButton/styles/hover_pressed = SubResource("StyleBoxEmpty_53mcq")
 CheckButton/styles/normal = SubResource("StyleBoxEmpty_10nrd")
 CheckButton/styles/pressed = SubResource("StyleBoxEmpty_udmbm")
+HBoxContainer/constants/separation = 10
 HScrollBar/icons/decrement = ExtResource("9_o6or4")
 HScrollBar/icons/decrement_highlight = ExtResource("9_o6or4")
 HScrollBar/icons/decrement_pressed = ExtResource("9_o6or4")
