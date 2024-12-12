@@ -1,0 +1,45 @@
+---
+manual:
+- id: C2001
+  preconditions: These are the C2001 preconditions
+  steps:
+  - number: 1
+    description: Step 1 description
+    expected_result: Step 1 expected result
+  - number: 2
+    description: Step 2 description
+    expected_result: Step 2 expected result
+  - number: 3
+    description: Step 3 description
+    expected_result: Step 3 expected result
+- id: C2002
+  preconditions: These are the C2002 preconditions
+  steps:
+  - number: 1
+    description: Step 1 description
+    expected_result: Step 1 expected result
+  - number: 2
+    description: Step 2 description
+    expected_result: Step 2 expected result
+  - number: 3
+    description: Step 3 description
+    expected_result: Step 3 expected result
+- id: C2003
+  preconditions: These are the C2003 preconditions
+  steps:
+  - number: 1
+    description: Step 1 description
+    expected_result: Step 1 expected result
+  - number: 2
+    description: Step 2 description
+    expected_result: Step 2 expected result
+  - number: 3
+    description: Step 3 description
+    expected_result: Step 3 expected result
+automated:
+- id: C2004
+  script: tbar_pytest/test_cases/test_suite_2000.py
+- id: C2005
+  script: tbar_pytest/test_cases/test_suite_2000.py
+- id: C2006
+  script: tbar_pytest/test_cases/test_suite_2000.py

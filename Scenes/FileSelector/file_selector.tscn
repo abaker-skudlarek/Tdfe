@@ -1,8 +1,21 @@
-[gd_scene format=3 uid="uid://chvi6kdnyjmr7"]
+[gd_scene load_steps=2 format=3 uid="uid://chvi6kdnyjmr7"]
+
+[ext_resource type="Script" path="res://Scenes/FileSelector/file_selector.gd" id="1_23lmu"]
 
 [node name="FileSelector" type="VBoxContainer"]
-offset_right = 800.0
+offset_right = 807.0
 offset_bottom = 67.0
+script = ExtResource("1_23lmu")
+
+[node name="FolderBrowserWindow" type="FileDialog" parent="."]
+title = "Open a Directory"
+initial_position = 1
+size = Vector2i(377, 175)
+ok_button_text = "Select Current Folder"
+file_mode = 2
+access = 2
+show_hidden_files = true
+use_native_dialog = true
 
 [node name="FolderBrowser" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -11,11 +24,21 @@ layout_mode = 2
 layout_mode = 2
 text = "Test Definitions Folder"
 
+[node name="Spacer" type="Control" parent="FolderBrowser"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.02
+
 [node name="LineEdit" type="LineEdit" parent="FolderBrowser"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="FolderBrowser"]
+[node name="Spacer2" type="Control" parent="FolderBrowser"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.03
+
+[node name="BrowseButton" type="Button" parent="FolderBrowser"]
 layout_mode = 2
 text = "Browse
 "
@@ -27,15 +50,19 @@ layout_mode = 2
 layout_mode = 2
 text = "Test Definition File"
 
+[node name="Spacer" type="Control" parent="FileBrowser"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+
 [node name="OptionButton" type="OptionButton" parent="FileBrowser"]
 layout_mode = 2
 size_flags_horizontal = 3
-item_count = 2
-popup/item_0/text = "Item 0"
-popup/item_1/text = "Item 1"
-popup/item_1/id = 1
 
-[node name="Button" type="Button" parent="FileBrowser"]
+[node name="Spacer2" type="Control" parent="FileBrowser"]
 layout_mode = 2
-text = "View
-"
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.14
+
+[connection signal="dir_selected" from="FolderBrowserWindow" to="." method="_on_folder_browser_window_dir_selected"]
+[connection signal="pressed" from="FolderBrowser/BrowseButton" to="." method="_on_browse_button_pressed"]

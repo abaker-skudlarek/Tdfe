@@ -14,6 +14,10 @@ config/name="TDFE"
 run/main_scene="res://Scenes/FileSelector/file_selector.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+
 [display]
 
 window/size/viewport_width=1280
