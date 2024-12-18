@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://pieddm2aq6o8"]
+
+[ext_resource type="ButtonGroup" uid="uid://djxrfgsoyyfji" path="res://Scenes/AddTestCase/radio_button_group.tres" id="1_fa7s6"]
+
+[node name="AddTestCase" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Test Type:"
+
+[node name="Button" type="CheckBox" parent="HBoxContainer"]
+layout_mode = 2
+button_group = ExtResource("1_fa7s6")
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Manual"
+
+[node name="Button2" type="CheckBox" parent="HBoxContainer"]
+layout_mode = 2
+button_group = ExtResource("1_fa7s6")
+
+[node name="Label3" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Automated"

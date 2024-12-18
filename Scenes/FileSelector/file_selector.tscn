@@ -66,3 +66,4 @@ size_flags_stretch_ratio = 0.14
 
 [connection signal="dir_selected" from="FolderBrowserWindow" to="." method="_on_folder_browser_window_dir_selected"]
 [connection signal="pressed" from="FolderBrowser/BrowseButton" to="." method="_on_browse_button_pressed"]
+[connection signal="item_selected" from="FileBrowser/OptionButton" to="." method="_on_option_button_item_selected"]

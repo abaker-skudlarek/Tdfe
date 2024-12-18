@@ -1,5 +1,6 @@
 extends VBoxContainer
 
+signal file_chosen(file_path: String)
 @onready var option_button: OptionButton = $FileBrowser/OptionButton
 
 
@@ -28,5 +29,11 @@ func _on_folder_browser_window_dir_selected(dir: String) -> void:
 	var files: Array = get_files_in_dir(dir)
 	if option_button.has_selectable_items():
 		option_button.clear()
+	option_button.add_item("")
 	for file: String in files:
 		option_button.add_item(file)
+
+
+func _on_option_button_item_selected(index:int) -> void:
+	var file_path: String = $FolderBrowser/LineEdit.text + "/" + option_button.get_item_text(index)
+	file_chosen.emit(file_path)
